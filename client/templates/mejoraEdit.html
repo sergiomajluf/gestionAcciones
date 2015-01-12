@@ -1,0 +1,159 @@
+<template name="mejoraEdit">
+    <form>
+        <div class="well">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Plan de Mejoras Acreditación</h2>
+                    <small>{{_id}}</small>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="v_ndebilidad">Debilidad #</label>
+                        <select name="v_ndebilidad" class="form-control">
+                            <option {{selected ndebilidad "01"}}>01</option>
+                            <option {{selected ndebilidad "02"}}>02</option>
+                            <option {{selected ndebilidad "03"}}>03</option>
+                            <option {{selected ndebilidad "04"}}>04</option>
+                            <option {{selected ndebilidad "05"}}>05</option>
+                            <option {{selected ndebilidad "06"}}>06</option>
+                            <option {{selected ndebilidad "07"}}>07</option>
+                            <option {{selected ndebilidad "08"}}>08</option>
+                            <option {{selected ndebilidad "09"}}>09</option>
+                            <option {{selected ndebilidad "10"}}>10</option>
+                            <option {{selected ndebilidad "11"}}>11</option>
+                            <option {{selected ndebilidad "12"}}>12</option>
+                            <option {{selected ndebilidad "13"}}>13</option>
+                            <option {{selected ndebilidad "14"}}>14</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="v_naccion">Acción #</label>
+                        <select name="v_naccion" class="form-control">
+                            <option {{selected naccion "01"}}>01</option>
+                            <option {{selected naccion "02"}}>02</option>
+                            <option {{selected naccion "03"}}>03</option>
+                            <option {{selected naccion "04"}}>04</option>
+                            <option {{selected naccion "05"}}>05</option>
+                            <option {{selected naccion "06"}}>06</option>
+                            <option {{selected naccion "07"}}>07</option>
+                            <option {{selected naccion "08"}}>08</option>
+                            <option {{selected naccion "09"}}>09</option>
+                            <option {{selected naccion "10"}}>10</option>
+                            <option {{selected naccion "11"}}>11</option>
+                            <option {{selected naccion "12"}}>12</option>
+                            <option {{selected naccion "13"}}>13</option>
+                            <option {{selected naccion "14"}}>14</option>
+                            <option {{selected naccion "15"}}>15</option>
+                            <option {{selected naccion "16"}}>16</option>
+                            <option {{selected naccion "17"}}>17</option>
+                            <option {{selected naccion "18"}}>18</option>
+                            <option {{selected naccion "19"}}>19</option>
+                            <option {{selected naccion "20"}}>20</option>
+                            <option {{selected naccion "21"}}>21</option>
+                            <option {{selected naccion "22"}}>22</option>
+                            <option {{selected naccion "23"}}>23</option>
+                            <option {{selected naccion "24"}}>24</option>
+                            <option {{selected naccion "25"}}>25</option>
+                            <option {{selected naccion "26"}}>26</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>Estado</label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="v_estado" value="verde" {{checked estado "verde"}}>OK</label>
+                            <br/>
+                            <label>
+                                <input type="radio" name="v_estado" value="amarillo" {{checked estado "amarillo"}}>En desarrollo</label>
+                            <br/>
+                            <label>
+                                <input type="radio" name="v_estado" value="rojo" {{checked estado "rojo"}}>Pendiente</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-default editarMejora">Guardar Cambios</button>
+            {{#if _id}}
+            <a href="/mejora/{{_id}}" class="btn btn-link" title="">Cancelar</a>
+            {{/if}}
+
+        </div>
+
+        <div class="form-group">
+            <label for="v_descripcion">Descripción</label>
+            <textarea class="form-control" rows="3" id="v_descripcion">{{descripcion}}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="v_descripcion">Objetivos</label>
+            <textarea class="form-control" rows="3" id="v_objetivos">{{objetivos}}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="v_descripcion">Acción</label>
+            <textarea class="form-control destacado" rows="3" id="v_accion">{{accion}}</textarea>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="v_indicador">Indicador</label>
+                    <textarea class="form-control" rows="3" id="v_indicador">{{indicador}}</textarea>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="v_meta">Meta</label>
+                    <textarea class="form-control" rows="3" id="v_meta">{{meta}}</textarea>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="v_plazo">Plazo</label>
+                    <textarea class="form-control" rows="3" id="v_plazo">{{plazo}}</textarea>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="v_presupuesto">Presupuesto</label>
+                    <textarea class="form-control" rows="3" id="v_presupuesto">{{presupuesto}}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label for="v_avance">Estado de Avance</label>
+                    <textarea class="form-control" rows="10" id="v_avance">{{avance}}</textarea>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Responsables</label>
+                    
+                    <div class="checkbox">
+                    	{{#each arrayify responsables}}
+                    	<label><input type="checkbox" name="v_responsable[]" checked={{value}} value="{{name}}"> {{name}}</label><br />
+						{{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+            <button type="submit" class="btn btn-default editarMejora">Guardar Cambios</button>
+
+    </form>
+</template>

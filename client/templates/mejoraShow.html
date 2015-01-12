@@ -1,0 +1,158 @@
+<template name="mejoraShow">
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <h3 class="panel-title">Plan de Mejoras Acreditación</h3>
+                            <small>Facultad de Diseño UDD</small>
+                        </th>
+                        <th class="text-center"><small>Debilidad #</small>
+                        </th>
+                        <th class="text-center"><small>Acción #</small>
+                        </th>
+                        <th class="text-center"><small>Estado</small>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="/edicion/{{_id}}" title="">Editar</a>
+                        </td>
+                        <td class="text-center" id="v_ndebilidad">{{ndebilidad}}</td>
+                        <td class="text-center" id="v_naccion">{{naccion}}</td>
+                        <td class="text-center {{estado}}" id="v_estado">{{estado}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Descripción</h3>
+              </div>
+              <div class="panel-body">
+                {{{descripcion}}}
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Objetivos</h3>
+              </div>
+              <div class="panel-body">
+                {{{objetivos}}}
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Acción</h3>
+              </div>
+              <div class="panel-body">
+                {{{accion}}}
+              </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        
+        <div class="col-sm-3">
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Indicador</h3>
+              </div>
+              <div class="panel-body">
+                {{{indicador}}}
+              </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Meta</h3>
+              </div>
+              <div class="panel-body">
+                {{{meta}}}
+              </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Plazo</h3>
+              </div>
+              <div class="panel-body">
+                {{{plazo}}}
+              </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Presupuesto</h3>
+              </div>
+              <div class="panel-body">
+                {{{presupuesto}}}
+              </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Estado de Avance / Revisado: {{formatDate revision "long"}}</h3>
+              </div>
+              <div class="panel-body multilinea">
+                <pre>{{{avance}}}</pre>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Responsable</h3>
+              </div>
+              <div class="panel-body">
+                    <div class="checkbox">
+                        {{#each arrayify responsables}}
+                        <label><input type="checkbox" name="v_responsable[]" checked={{value}} value="{{name}}" disabled> {{name}}</label><br />
+                        {{/each}}
+                    </div>
+              </div>
+            </div> 
+
+        </div>
+
+    </div>
+
+ 
+</template>
