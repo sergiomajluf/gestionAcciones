@@ -1,9 +1,16 @@
 <template name="nav">
+
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+              
+                   <button type="button" class="btn btn-primary saveButton" id="guardarActividad"><span class="glyphicon glyphicon glyphicon-floppy-disk"> Guardar</span>
+                    </button>
+                    <button type="button" class="btn btn-default deleteButton"><span class="glyphicon glyphicon-trash"></span>
+                    </button>
 
+                
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -11,8 +18,9 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse pull-right">
                 <ul class="nav navbar-nav">
+                
                     <li class=""><a href="/">Home</a>
                     </li>
                     <li class=""><a href="/nueva">Nueva</a>
@@ -129,12 +137,7 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="nav navbar-nav navbar-right" role="group">
-                    <button type="button" class="btn btn-primarybtn-lg deleteButton"><span class="glyphicon glyphicon-trash"></span>
-                    </button>
-                    <button type="button" class="btn btn-primarybtn-lg saveButton"><span class="glyphicon glyphicon-floppy-disk"></span>
-                    </button>
-                </div>
+                
 
             </div>
             <!--/.nav-collapse -->

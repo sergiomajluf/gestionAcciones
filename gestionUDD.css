@@ -57,3 +57,21 @@ textarea {
   width: 200px;
   cursor: move;
 }
+
+.radio.listaResponsables label{
+  display: block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 24px;
+}
+.radio.listaResponsables label input{
+  margin-left: -20px;
+}
+.radio.listaResponsables label:hover{
+  background-color: #f4f4f4;
+}
+
+.radio.listaResponsables h6 {
+  border-top: 1px dotted #f4f4f4;
+  padding-top: 10px;
+}

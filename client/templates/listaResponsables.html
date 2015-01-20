@@ -1,13 +1,61 @@
 <template name="listaResponsables">
-	<label><input type="checkbox" name="v_responsable[]" value="decano" checked> Decano</label><br />
-	<label><input type="checkbox" name="v_responsable[]" value="viceDecano"> Vice Decano</label><br />
-	<label><input type="checkbox" name="v_responsable[]" value="directorPregrado"> Directores Pregrado</label><br />
-	<label><input type="checkbox" name="v_responsable[]" value="directorExtension"> Directora Extensión</label><br />
-	<label><input type="checkbox" name="v_responsable[]" value="subDirectorExtension"> Sub Director Extensión</label><br />
-	<label><input type="checkbox" name="v_responsable[]" value="coordinadorPregradoScl"> Coord. Pregrado Santiago</label><br />
-	<label><input type="checkbox" name="v_responsable[]" value="coordinadorPregradoCcp"> Coord. Pregrado Concepción</label><br />
-	<label><input type="checkbox" name="v_responsable[]" value="coordinadorExtension"> Coord. Extensión</label><br />
-	<label><input type="checkbox" name="v_responsable[]" value="coordinadorAdmision"> Coord. Admision</label><br />
-	<label><input type="checkbox" name="v_responsable[]" value="coordinadorPlanificacion"> Coord. Planificación</label><br />
-	<label><input type="checkbox" name="v_responsable[]" value="investigador"> Investigador</label>
+    <div class="radio listaResponsables">
+
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="decano" checked> Decano</label>
+
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="viceDecano"> Vice Decano</label>
+        </div>
+
+        <div class="form-group">
+            <h6>Directores de Pregrado</h6>
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="directorExtension">Pregrado CCP</label>
+
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="subDirectorExtension">Plan Común SCL</label>
+
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="coordinadorPregradoScl">Diseño Ambientes & Objetos SCL</label>
+
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="coordinadorPregradoScl">Diseño Digital</label>
+
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="coordinadorPregradoScl">Diseño Gráfico SCL</label>
+        </div>
+
+        <div class="form-group">
+            <h6>Extensión y Vinculación con el Medio</h6>
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="directorPregrado">Directora de Extensión & Educación Continua</label>
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="coordinadorPregradoCcp">Sub Director de Extensión</label>
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="coordinadorPregradoCcp">Coordinador de Extensión CCP</label>
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="coordinadorPregradoCcp">Coordinador de Extensión SCL</label>
+        </div>
+
+        <div class="form-group">
+            <h6>Coordinadores</h6>
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="coordinadorPregradoCcp"> Coord. Pregrado Concepción</label>
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="coordinadorExtension"> Coord. Extensión</label>
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="coordinadorAdmision"> Coord. Admision</label>
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="coordinadorPlanificacion"> Coord. Planificación</label>
+        </div>
+
+        <div class="form-group">
+            <h6>Investigación</h6>
+            <label>
+                <input type="checkbox" name="v_responsable[]" value="investigador"> Investigador</label>
+        </div>
+    </div>
+
 </template>

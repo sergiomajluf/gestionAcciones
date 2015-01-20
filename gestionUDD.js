@@ -136,7 +136,10 @@ if (Meteor.isClient) {
         }
       }
     },
+
     'click .saveButton': function(event) {
+
+      /*
       var _id = this._id;
 
       var _ndebilidad = document.getElementsByName("v_ndebilidad").value;
@@ -174,21 +177,67 @@ if (Meteor.isClient) {
         revision: new Date()
 
       }
-      console.log(_ndebilidad);
-
-      //Mejoras.update(_id, {$set: {newData} );
-
-
-
-      /*Mejoras.update(this._id, {$set: {
-        accion: _accion.innerHTML,
-        meta: editor.v_meta
-      }})*/
+      console.log(updateData);
+      */
 
     },
     'click .filterMenu': function(event) {
       //console.log(event.target.dataset.id)
       Session.set("filtroResponsables", event.target.dataset.id);
+    },
+     'click #guardarActividad': function(event) {
+      event.preventDefault();
+      console.log("hey")
+
+      var _id = this._id;
+      var _ndebilidad = event.target.v_ndebilidad.value;
+      var _naccion = event.target.v_naccion.value;
+      var _estado = event.target.v_estado.value;
+      var _descripcion = event.target.v_descripcion.value;
+      var _objetivos = event.target.v_objetivos.value;
+      var _accion = event.target.v_accion.value;
+      var _indicador = event.target.v_indicador.value;
+      var _meta = event.target.v_meta.value;
+      var _plazo = event.target.v_plazo.value;
+      var _presupuesto = event.target.v_presupuesto.value;
+      var _responsable = document.getElementsByName("v_responsable[]");
+      var _avance = event.target.v_avance.value;
+
+      var _responsables = {}
+
+      for (k = 0; k < _responsable.length; k++) {
+        _responsables[_responsable[k].value] = _responsable[k].checked;
+      }
+
+      var newData = {
+        ndebilidad: _ndebilidad,
+        naccion: _naccion,
+        estado: _estado,
+        descripcion: _descripcion,
+        objetivos: _objetivos,
+        accion: _accion,
+        indicador: _indicador,
+        meta: _meta,
+        plazo: _plazo,
+        presupuesto: _presupuesto,
+        responsables: _responsables,
+        avance: _avance,
+        revision: new Date()
+
+      }
+
+      if (_id == undefined) {
+        console.log("new entry, therefor insert");
+        Mejoras.insert(newData, function(err, newId) {
+          Router.go('/edicion/' + newId);
+        });
+      } else {
+        console.log("Existing entry, will update", newData);
+        Mejoras.update(_id, {
+          $set: newData
+        });
+        //Router.go('/');
+      }
     }
   });
 
@@ -300,6 +349,7 @@ if (Meteor.isClient) {
     }
   });
 
+
   Template.mejoraEdit.events({
     'submit form': function(event) {
       event.preventDefault();
@@ -353,6 +403,31 @@ if (Meteor.isClient) {
       }
     }
   });
+
+
+function submitme() {
+    form={};
+
+    $.each($('#formulario').serializeArray(), function() {
+        form[this.name] = this.value;
+    });
+
+    //do validation on form={firstname:'first name', lastname: 'last name', email: 'email@email.com'}
+    console.log(form)
+    // MyCollection.insert(form, function(err) {
+    //     if(!err) {
+    //         alert("Submitted!");
+    //         $('#myform')[0].reset();
+    //     }
+    //     else
+    //     {
+    //         alert("Something is wrong");
+    //         console.log(err);
+    //     }
+    // });
+
+}
+
 }
 
 if (Meteor.isServer) {
