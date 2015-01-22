@@ -2,72 +2,141 @@ Mejoras = new Mongo.Collection('mejoras');
 
 if (Meteor.isClient) {
   Session.setDefault("filtroResponsables", "nadie");
+  Session.setDefault("editable", false);
 
   Template.Home.helpers({
     mejora: function() {
       //return Mejoras.find( {} , { sort: { ndebilidad: 1, naccion: 1 } });
       var filtroResponsables = Session.get("filtroResponsables");
+      var ordenDescendente = {sort : { nactividad : 1 } }
 
       switch (filtroResponsables) {
         case "decano":
           return Mejoras.find({
             "responsables.decano": true
-          }).fetch()
+          }, ordenDescendente )
           break;
 
         case "viceDecano":
           return Mejoras.find({
             "responsables.viceDecano": true
-          }).fetch()
+          }, ordenDescendente )
           break;
 
-        case "directorPregrado":
+        case "directorPregradoCcp":
           return Mejoras.find({
-            "responsables.directorPregrado": true
-          }).fetch()
+            "responsables.directorPregradoCcp": true
+          }, ordenDescendente )
           break;
 
+
+        case "directorPlanComunScl":
+          return Mejoras.find({
+            "responsables.directorPlanComunScl": true
+          }, ordenDescendente )
+          break;
+
+        case "directorAmbientesYObjetos":
+          return Mejoras.find({
+            "responsables.directorAmbientesYObjetos": true
+          }, ordenDescendente )
+          break;
+
+        case "directorDigital":
+          return Mejoras.find({
+            "responsables.directorDigital": true
+          }, ordenDescendente )
+          break;
+
+        case "directorGrafico":
+          return Mejoras.find({
+            "responsables.directorGrafico": true
+          }, ordenDescendente )
+          break;
 
         case "directorExtension":
           return Mejoras.find({
             "responsables.directorExtension": true
-          }).fetch()
+          }, ordenDescendente )
           break;
 
-        case "coordinadorPlanificacion":
+
+        case "subdirectorExtension":
+          return Mejoras.find({
+            "responsables.subdirectorExtension": true
+          }, ordenDescendente )
+          break;
+
+        case "coordinadorExtensionCcp":
+          return Mejoras.find({
+            "responsables.coordinadorExtensionCcp": true
+          }, ordenDescendente )
+          break;
+
+        case "coordinadorExtensionScl":
+          return Mejoras.find({
+            "responsables.coordinadorExtensionScl": true
+          }, ordenDescendente )
+          break;
+
+        case "coordinadorAcademicoCcp":
+          return Mejoras.find({
+            "responsables.coordinadorAcademicoCcp": true
+          }, ordenDescendente )
+          break;
+
+        case "coordinadorAcademicoPCScl":
+          return Mejoras.find({
+            "responsables.coordinadorAcademicoPCScl": true
+          }, ordenDescendente )
+          break;
+
+        case "coordinadorAcademicoAOcl":
+          return Mejoras.find({
+            "responsables.coordinadorAcademicoAOcl": true
+          }, ordenDescendente )
+          break;
+
+
+        case "coordinadorAcademicoDScl":
+          return Mejoras.find({
+            "responsables.coordinadorAcademicoDScl": true
+          }, ordenDescendente )
+          break;
+
+        case "coordinadorAcademicoGScl":
+          return Mejoras.find({
+            "responsables.coordinadorAcademicoGScl": true
+          }, ordenDescendente )
+          break;
+
+        case "coordinadorAdmisionCcp":
+          return Mejoras.find({
+            "responsables.coordinadorAdmisionCcp": true
+          }, ordenDescendente )
+          break;
+
+                  case "coordinadorAdmisionScl":
+          return Mejoras.find({
+            "responsables.coordinadorAdmisionScl": true
+          }, ordenDescendente )
+          break;
+
+                  case "coordinadorPlanificacion":
           return Mejoras.find({
             "responsables.coordinadorPlanificacion": true
-          }).fetch()
+          }, ordenDescendente )
           break;
 
-        case "coordinadorPregradoScl":
-          return Mejoras.find({
-            "responsables.coordinadorPregradoScl": true
-          }).fetch()
-          break;
-
-        case "coordinadorPregradoCcp":
-          return Mejoras.find({
-            "responsables.coordinadorPregradoCcp": true
-          }).fetch()
-          break;
-
-        case "investigador":
+                  case "investigador":
           return Mejoras.find({
             "responsables.investigador": true
-          }).fetch()
-          break;
-
-
-        case "coordinadorAdmision":
-          return Mejoras.find({
-            "responsables.coordinadorAdmision": true
-          }).fetch()
+          }, ordenDescendente )
           break;
 
 
         default:
-          return Mejoras.find({}).fetch();
+          return Mejoras.find({}, ordenDescendente )
 
       }
 
@@ -123,6 +192,9 @@ if (Meteor.isClient) {
   });
 
   Template.nav.events({
+    'click input[name="toggleEditable"]': function(){
+      Session.set('editable', !Session.get('editable'));
+    },
     'click .deleteButton': function() {
       var confirmation = prompt("Escribe BORRAR para confirmar", "");
       if (confirmation != null) {
@@ -137,7 +209,7 @@ if (Meteor.isClient) {
       }
     },
 
-    'click .saveButton': function(event) {
+    'click2 .saveButton': function(event) {
 
       /*
       var _id = this._id;
@@ -184,63 +256,25 @@ if (Meteor.isClient) {
     'click .filterMenu': function(event) {
       //console.log(event.target.dataset.id)
       Session.set("filtroResponsables", event.target.dataset.id);
-    },
-     'click #guardarActividad': function(event) {
-      event.preventDefault();
-      console.log("hey")
+    }
+  });
 
-      var _id = this._id;
-      var _ndebilidad = event.target.v_ndebilidad.value;
-      var _naccion = event.target.v_naccion.value;
-      var _estado = event.target.v_estado.value;
-      var _descripcion = event.target.v_descripcion.value;
-      var _objetivos = event.target.v_objetivos.value;
-      var _accion = event.target.v_accion.value;
-      var _indicador = event.target.v_indicador.value;
-      var _meta = event.target.v_meta.value;
-      var _plazo = event.target.v_plazo.value;
-      var _presupuesto = event.target.v_presupuesto.value;
-      var _responsable = document.getElementsByName("v_responsable[]");
-      var _avance = event.target.v_avance.value;
-
-      var _responsables = {}
-
-      for (k = 0; k < _responsable.length; k++) {
-        _responsables[_responsable[k].value] = _responsable[k].checked;
-      }
-
-      var newData = {
-        ndebilidad: _ndebilidad,
-        naccion: _naccion,
-        estado: _estado,
-        descripcion: _descripcion,
-        objetivos: _objetivos,
-        accion: _accion,
-        indicador: _indicador,
-        meta: _meta,
-        plazo: _plazo,
-        presupuesto: _presupuesto,
-        responsables: _responsables,
-        avance: _avance,
-        revision: new Date()
-
-      }
-
-      if (_id == undefined) {
-        console.log("new entry, therefor insert");
-        Mejoras.insert(newData, function(err, newId) {
-          Router.go('/edicion/' + newId);
-        });
-      } else {
-        console.log("Existing entry, will update", newData);
-        Mejoras.update(_id, {
-          $set: newData
-        });
-        //Router.go('/');
+  
+  Template.nav.helpers({
+    'editable': function(){
+      if(!Session.get("editable")){
+        return 'disabled';
       }
     }
   });
 
+  Template.mejoraForm.helpers({
+    'editable': function(){
+      if(!Session.get("editable")){
+        return 'disabled';
+      }
+    }
+  });
 
   Template.nuevaAccion.events({
     'submit form': function(event) {
@@ -295,19 +329,22 @@ if (Meteor.isClient) {
 
   Template.mejoraForm.events({
     'submit form': function(event) {
+      console.log("Accion guardada")
       event.preventDefault();
 
       var _id = this._id;
-      var _ndebilidad = event.target.v_ndebilidad.value;
-      var _naccion = event.target.v_naccion.value;
+      var _nactividad = event.target.v_actividad.value;
       var _estado = event.target.v_estado.value;
-      var _descripcion = event.target.v_descripcion.value;
-      var _objetivos = event.target.v_objetivos.value;
+      var _lineamiento = event.target.v_lineamiento.value;
+      var _area = event.target.v_area.value;
+
       var _accion = event.target.v_accion.value;
+      var _objetivoGeneral = event.target.v_objetivoGeneral.value;
+      var _objetivoEspecifico = event.target.v_objetivoEspecifico.value;
+      
       var _indicador = event.target.v_indicador.value;
       var _meta = event.target.v_meta.value;
-      var _plazo = event.target.v_plazo.value;
-      var _presupuesto = event.target.v_presupuesto.value;
+      var _plazo = event.target.v_plazo.value;      
       var _responsable = document.getElementsByName("v_responsable[]");
       var _avance = event.target.v_avance.value;
 
@@ -318,92 +355,59 @@ if (Meteor.isClient) {
       }
 
       var newData = {
-        ndebilidad: _ndebilidad,
-        naccion: _naccion,
+        nactividad: _nactividad,
         estado: _estado,
-        descripcion: _descripcion,
-        objetivos: _objetivos,
+        lineamiento: _lineamiento,
+        area: _area,
         accion: _accion,
+        objetivoGeneral: _objetivoGeneral,
+        objetivoEspecifico: _objetivoEspecifico,
         indicador: _indicador,
         meta: _meta,
         plazo: _plazo,
-        presupuesto: _presupuesto,
         responsables: _responsables,
         avance: _avance,
         revision: new Date()
 
       }
 
+
+      var disableButton = function() {
+
+        $('.saveButton').attr('disabled','disabled');
+        $('.saveButton i').removeClass('glyphicon-floppy-disk').addClass('glyphicon-refresh glyphicon-spin');
+
+        setTimeout ( function(){
+          $('.saveButton').removeAttr("disabled");
+          $('.saveButton i').removeClass('glyphicon-refresh glyphicon-spin').addClass('glyphicon-floppy-disk');
+        }, 2000 );
+
+      }
+
+      
+      
+
       if (_id == undefined) {
-        console.log("new entry, therefor insert");
+        console.log("New entry, therefore insert");
         Mejoras.insert(newData, function(err, newId) {
           Router.go('/edicion/' + newId);
         });
       } else {
-        console.log("Existing entry, will update", newData);
+        console.log("Existing entry, update", newData);
+        $('.saveButton').attr('disabled','disabled');
+
+        disableButton();
         Mejoras.update(_id, {
           $set: newData
         });
         //Router.go('/');
       }
+
     }
   });
 
 
-  Template.mejoraEdit.events({
-    'submit form': function(event) {
-      event.preventDefault();
-
-      var _id = this._id;
-      var _ndebilidad = event.target.v_ndebilidad.value;
-      var _naccion = event.target.v_naccion.value;
-      var _estado = event.target.v_estado.value;
-      var _descripcion = event.target.v_descripcion.value;
-      var _objetivos = event.target.v_objetivos.value;
-      var _accion = event.target.v_accion.value;
-      var _indicador = event.target.v_indicador.value;
-      var _meta = event.target.v_meta.value;
-      var _plazo = event.target.v_plazo.value;
-      var _presupuesto = event.target.v_presupuesto.value;
-      var _responsable = document.getElementsByName("v_responsable[]");
-      var _avance = event.target.v_avance.value;
-
-      var _responsables = {}
-
-      for (k = 0; k < _responsable.length; k++) {
-        _responsables[_responsable[k].value] = _responsable[k].checked;
-      }
-
-      var newData = {
-        ndebilidad: _ndebilidad,
-        naccion: _naccion,
-        estado: _estado,
-        descripcion: _descripcion,
-        objetivos: _objetivos,
-        accion: _accion,
-        indicador: _indicador,
-        meta: _meta,
-        plazo: _plazo,
-        presupuesto: _presupuesto,
-        responsables: _responsables,
-        avance: _avance,
-        revision: new Date()
-
-      }
-
-      if (_id == undefined) {
-        console.log("new entry, therefor insert");
-        //Meteor.call("crearAccion", newData);
-      } else {
-        console.log("Existing entry, will update", newData);
-        Mejoras.update(_id, {
-          $set: newData
-        });
-        //Router.go('/');
-      }
-    }
-  });
-
+  
 
 function submitme() {
     form={};

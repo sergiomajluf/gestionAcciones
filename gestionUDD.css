@@ -7,6 +7,39 @@ body {
 	margin-top: 5px;
 	margin-right: 15px;
 }
+/*.estado {
+  display: block;
+  width: 30px;
+  padding: 30px; 
+  border-radius: 15px;
+}*/
+
+.fa-spin-custom, .glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+
 .amarillo {
 	background-color: yellow;
 	width: 15%;
@@ -22,6 +55,16 @@ body {
 	width: 15%;
 	text-indent: -9999px;
 }
+
+.col-sm-1.col-md-1.col-lg-1 img {
+ width:100%;
+ min-width: 50px;
+ max-height: 50px;
+ margin-bottom: 10px;
+ border-radius:5px;
+}
+
+
 textarea {
 	width: 100%;
 }

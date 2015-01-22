@@ -73,11 +73,11 @@
                         <div class="form-group">
                             <label for="v_lineamiento">Lineamiento Estratégico</label>
                             <select name="v_lineamiento" class="form-control">
-                                <option {{selected lineamiento "01"}}>1 - Formación en Diseño</option>
-                                <option {{selected lineamiento "02"}}>2 - Aseguramiento de la Calidad de la docencia y los procesos de gestion de la facultad</option>
-                                <option {{selected lineamiento "03"}}>3 - Fortalecimiento de la innovación y el emprendimiento</option>
-                                <option {{selected lineamiento "04"}}>4 - Vinculación con organizaciones públicas y privadas</option>
-                                <option {{selected lineamiento "05"}}>5 - Investigación para el desarrollo y transferencia del conocimiento</option>
+                                <option {{selected lineamiento "1 - Formación en Diseño"}}>1 - Formación en Diseño</option>
+                                <option {{selected lineamiento "2 - Aseguramiento de la Calidad de la docencia y los procesos de gestion de la facultad"}}>2 - Aseguramiento de la Calidad de la docencia y los procesos de gestion de la facultad</option>
+                                <option {{selected lineamiento "3 - Fortalecimiento de la innovación y el emprendimiento"}}>3 - Fortalecimiento de la innovación y el emprendimiento</option>
+                                <option {{selected lineamiento "4 - Vinculación con organizaciones públicas y privadas"}}>4 - Vinculación con organizaciones públicas y privadas</option>
+                                <option {{selected lineamiento "5 - Investigación para el desarrollo y transferencia del conocimiento"}}>5 - Investigación para el desarrollo y transferencia del conocimiento</option>
 
                             </select>
                         </div>
@@ -87,10 +87,10 @@
                         <div class="form-group">
                             <label for="v_area">Área de la Facultad</label>
                             <select name="v_area" class="form-control">
-                                <option {{selected area "01"}}>1 - Pregrado y Posgrado</option>
-                                <option {{selected area "02"}}>2 - Vinculación con el Medio</option>
-                                <option {{selected area "03"}}>3 - Investigación</option>
-                                <option {{selected area "04"}}>4 - Toda la Facultad</option>
+                                <option {{selected area "1 - Pregrado y Posgrado"}}>1 - Pregrado y Posgrado</option>
+                                <option {{selected area "2 - Vinculación con el Medio"}}>2 - Vinculación con el Medio</option>
+                                <option {{selected area "3 - Investigación"}}>3 - Investigación</option>
+                                <option {{selected area "4 - Todas las áreas"}}>4 - Todas las áreas</option>
                             </select>
                         </div>
                     </div>
@@ -101,20 +101,20 @@
 
             <div class="form-group">
                 <label for="v_descripcion">Actividad / Descripción</label>
-                <textarea class="form-control destacado" rows="3" id="v_accion">{{accion}}</textarea>
+                <textarea class="form-control destacado" rows="3" id="v_accion" {{editable}}>{{accion}}</textarea>
             </div>
 
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="v_descripcion">Objetivo General</label>
-                        <textarea class="form-control" rows="3" id="v_objetivoGeneral">{{objetivoGeneral}}</textarea>
+                        <textarea class="form-control" rows="3" id="v_objetivoGeneral" {{editable}}>{{objetivoGeneral}}</textarea>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="v_descripcion">Objetivo Específico</label>
-                        <textarea class="form-control" rows="3" id="v_objetivoEspecifico">{{objetivoEspecifico}}</textarea>
+                        <textarea class="form-control" rows="3" id="v_objetivoEspecifico" {{editable}}>{{objetivoEspecifico}}</textarea>
                     </div>
                 </div>
             </div>
@@ -126,28 +126,28 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="v_indicador">Indicador</label>
-                                <textarea class="form-control" rows="4" id="v_indicador">{{indicador}}</textarea>
+                                <textarea class="form-control" rows="4" id="v_indicador" {{editable}}>{{indicador}}</textarea>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="v_meta">Meta</label>
-                                <textarea class="form-control" rows="4" id="v_meta">{{meta}}</textarea>
+                                <textarea class="form-control" rows="4" id="v_meta" {{editable}}>{{meta}}</textarea>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="v_plazo">Plazo</label>
-                                <textarea class="form-control" rows="4" id="v_plazo">{{plazo}}</textarea>
+                                <textarea class="form-control" rows="4" id="v_plazo" {{editable}}>{{plazo}}</textarea>
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="v_avance">Estado de Avance</label>
-                                <textarea class="form-control" rows="22" id="v_avance">{{avance}}</textarea>
+                                <textarea class="form-control" rows="22" id="v_avance" {{editable}}>{{avance}}</textarea>
                             </div>
                         </div>
                     </div>
@@ -160,7 +160,7 @@
                         <div class="checkbox">
                             {{#if _id}}
                                 {{#each arrayify responsables}}
-                                <label><input type="checkbox" name="v_responsable[]" checked={{value}} value="{{name}}"> {{name}}</label><br />
+                                <label><input type="checkbox" name="v_responsable[]" checked={{value}} value="{{name}}" {{editable}}> {{name}}</label><br />
                                 {{/each}}
                             {{else}}
                             {{> listaResponsables }}
