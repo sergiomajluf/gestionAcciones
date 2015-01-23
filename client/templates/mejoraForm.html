@@ -2,18 +2,19 @@
     <form id="formulario">
 
        {{> nav}}
-
-
                 <div class="row" >
                     <div class="col-sm-6 col-md-6 col-lg-6">
-                        <h2>Plan de Mejoras Acreditación</h2>
-                        <small>{{_id}}</small>
+                        <h2>Plan de Desarrollo 2013-2018</h2>
+                        {{#if _id}}
+                        <em>editado: {{formatDate revision "long"}}</em>
+                        {{/if}}
                     </div>
 
                     <div class="col-sm-3 col-md-3 col-lg-3">
                         <div class="form-group">
                             <label for="v_actividad">Nº Actividad</label>
                             <select name="v_actividad" class="form-control">
+
                                 <option {{selected nactividad "01"}}>01</option>
                                 <option {{selected nactividad "02"}}>02</option>
                                 <option {{selected nactividad "03"}}>03</option>
@@ -48,7 +49,99 @@
                                 <option {{selected nactividad "32"}}>32</option>
                                 <option {{selected nactividad "33"}}>33</option>
                                 <option {{selected nactividad "34"}}>34</option>
-                                <option {{selected nactividad "35"}}>35</option>                        
+                                <option {{selected nactividad "35"}}>35</option> 
+                                <option {{selected nactividad "36"}}>36</option>
+                                <option {{selected nactividad "37"}}>37</option>
+                                <option {{selected nactividad "38"}}>38</option>
+                                <option {{selected nactividad "39"}}>39</option> 
+                                <option {{selected nactividad "40"}}>40</option>
+                                <option {{selected nactividad "41"}}>41</option>
+                                <option {{selected nactividad "42"}}>42</option>
+                                <option {{selected nactividad "43"}}>43</option>
+                                <option {{selected nactividad "44"}}>44</option>
+                                <option {{selected nactividad "45"}}>45</option>
+                                <option {{selected nactividad "46"}}>46</option>
+                                <option {{selected nactividad "47"}}>47</option>
+                                <option {{selected nactividad "48"}}>48</option>
+                                <option {{selected nactividad "49"}}>49</option>
+                                <option {{selected nactividad "50"}}>50</option>
+                                <option {{selected nactividad "51"}}>51</option>
+                                <option {{selected nactividad "52"}}>52</option>
+                                <option {{selected nactividad "53"}}>53</option>
+                                <option {{selected nactividad "54"}}>54</option>
+                                <option {{selected nactividad "55"}}>55</option>
+                                <option {{selected nactividad "56"}}>56</option>
+                                <option {{selected nactividad "57"}}>57</option>
+                                <option {{selected nactividad "58"}}>58</option>
+                                <option {{selected nactividad "59"}}>59</option>
+                                <option {{selected nactividad "60"}}>60</option>
+                                <option {{selected nactividad "61"}}>61</option>
+                                <option {{selected nactividad "62"}}>62</option>
+                                <option {{selected nactividad "63"}}>63</option>
+                                <option {{selected nactividad "64"}}>64</option>
+                                <option {{selected nactividad "65"}}>65</option> 
+                                <option {{selected nactividad "66"}}>66</option>
+                                <option {{selected nactividad "67"}}>67</option>
+                                <option {{selected nactividad "68"}}>68</option>
+                                <option {{selected nactividad "69"}}>69</option> 
+                                <option {{selected nactividad "70"}}>70</option> 
+                                <option {{selected nactividad "71"}}>71</option> 
+                                <option {{selected nactividad "72"}}>72</option> 
+                                <option {{selected nactividad "73"}}>73</option> 
+                                <option {{selected nactividad "74"}}>74</option> 
+                                <option {{selected nactividad "75"}}>75</option> 
+                                <option {{selected nactividad "76"}}>76</option> 
+                                <option {{selected nactividad "77"}}>77</option> 
+                                <option {{selected nactividad "78"}}>78</option> 
+                                <option {{selected nactividad "79"}}>79</option> 
+                                <option {{selected nactividad "80"}}>80</option> 
+                                <option {{selected nactividad "81"}}>81</option> 
+                                <option {{selected nactividad "82"}}>82</option> 
+                                <option {{selected nactividad "83"}}>83</option> 
+                                <option {{selected nactividad "84"}}>84</option> 
+                                <option {{selected nactividad "85"}}>85</option> 
+                                <option {{selected nactividad "86"}}>86</option> 
+                                <option {{selected nactividad "87"}}>87</option> 
+                                <option {{selected nactividad "88"}}>88</option> 
+                                <option {{selected nactividad "89"}}>89</option> 
+                                <option {{selected nactividad "90"}}>90</option> 
+                                <option {{selected nactividad "91"}}>91</option> 
+                                <option {{selected nactividad "92"}}>92</option> 
+                                <option {{selected nactividad "93"}}>93</option> 
+                                <option {{selected nactividad "94"}}>94</option> 
+                                <option {{selected nactividad "95"}}>95</option> 
+                                <option {{selected nactividad "96"}}>96</option> 
+                                <option {{selected nactividad "97"}}>97</option> 
+                                <option {{selected nactividad "98"}}>98</option> 
+                                <option {{selected nactividad "99"}}>99</option> 
+                                <option {{selected nactividad "100"}}>100</option> 
+                                <option {{selected nactividad "101"}}>101</option> 
+                                <option {{selected nactividad "102"}}>102</option> 
+                                <option {{selected nactividad "103"}}>103</option> 
+                                <option {{selected nactividad "104"}}>104</option> 
+                                <option {{selected nactividad "105"}}>105</option> 
+                                <option {{selected nactividad "106"}}>106</option> 
+                                <option {{selected nactividad "107"}}>107</option> 
+                                <option {{selected nactividad "108"}}>108</option> 
+                                <option {{selected nactividad "109"}}>109</option> 
+                                <option {{selected nactividad "110"}}>110</option> 
+                                <option {{selected nactividad "111"}}>111</option> 
+                                <option {{selected nactividad "112"}}>112</option> 
+                                <option {{selected nactividad "113"}}>113</option> 
+                                <option {{selected nactividad "114"}}>114</option> 
+                                <option {{selected nactividad "115"}}>115</option> 
+                                <option {{selected nactividad "116"}}>116</option> 
+                                <option {{selected nactividad "117"}}>117</option> 
+                                <option {{selected nactividad "118"}}>118</option> 
+                                <option {{selected nactividad "119"}}>119</option> 
+                                <option {{selected nactividad "120"}}>120</option> 
+                                <option {{selected nactividad "121"}}>121</option> 
+                                <option {{selected nactividad "122"}}>122</option> 
+                                <option {{selected nactividad "123"}}>123</option> 
+                                <option {{selected nactividad "124"}}>124</option> 
+                                <option {{selected nactividad "125"}}>125</option> 
+                                <option {{selected nactividad "126"}}>126</option> 
+                                <option {{selected nactividad "127"}}>127</option>                                                   
                             </select>
                         </div>
                     </div>
@@ -121,7 +214,7 @@
 
             
            <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
@@ -153,14 +246,20 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="form-group">
                         <label>Responsables</label>
-                        
+
                         <div class="checkbox">
                             {{#if _id}}
                                 {{#each arrayify responsables}}
-                                <label><input type="checkbox" name="v_responsable[]" checked={{value}} value="{{name}}" {{editable}}> {{name}}</label><br />
+                                  <div class="form-group">
+                            <label>
+                            <input type="checkbox" name="v_responsable[]" checked={{value}} value="{{name}}" {{editable}}> {{name}}
+                            </label>
+                            </div>
+
+                                
                                 {{/each}}
                             {{else}}
                             {{> listaResponsables }}

@@ -1,156 +1,114 @@
 <template name="nav">
 
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-
-                    <button type="submit" class="btn btn-primary saveButton">
-                        <i class="glyphicon glyphicon-floppy-disk"></i> Guardar
-                    </button>
-                    <button type="button" class="btn btn-default deleteButton"><span class="glyphicon glyphicon-trash"></span>
-                    </button>
-
-                
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <div class="btn-group" role="group" aria-label="...">
+            {{#if ruta}}
+                {{#if isEditable}}
+                <button type="submit" class="btn btn-primary returnHome">
+                    <i class="glyphicon glyphicon-floppy-saved"></i> Guardar y volver
                 </button>
+                <button type="submit" class="btn btn-primary saveButton">
+                    <i class="glyphicon glyphicon-floppy-disk"></i> 
+                </button>
+                <button type="button" class="btn btn-default deleteButton"><span class="glyphicon glyphicon-trash"></span>
+                </button>
+                {{else}}
+                <a href="/edicion/{{_id}}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span> Editar</a>
+                {{/if}}
+            {{else}}
+            <a href="/nueva" class="btn btn-default"><span class="glyphicon glyphicon-file"></span> Nueva</a>
+            {{/if}}
             </div>
-            <div id="navbar" class="navbar-collapse collapse pull-right">
-                <ul class="nav navbar-nav">
-                
-                    <li><label><input type="checkbox" name="toggleEditable" value="" {{estado
-                    }}>Edit</label></li>
-                    <li class=""><a href="/">Home</a>
-                    </li>
-                    <li class=""><a href="/nueva">Nueva</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Responsables <span class="caret"></span></a>
-    <ul class="dropdown-menu" role="menu">
-        <li><a href="#" class="filterMenu" data-id="nadie">Ver todos</a>
-        </li>
-        <li class="divider"></li>
-        <li class="dropdown-header">Filtrar responsabilidades de:</li>
-        <li><a href="#" class="filterMenu" data-id="decano">Decano</a></li>
-        <li><a href="#" class="filterMenu" data-id="viceDecano">Vice Decano</a></li>
-
-        <li class="divider"></li>
-        <li><a href="#" class="filterMenu" data-id="directorPregradoCcp">Pregrado CCP</a></li>
-        <li><a href="#" class="filterMenu" data-id="directorPlanComunScl">Plan Común SCL</a></li>
-        <li><a href="#" class="filterMenu" data-id="directorAmbientesYObjetos">Diseño Amb. y Objetos SCL</a></li>
-        <li><a href="#" class="filterMenu" data-id="directorDigital">Diseño Digital</a></li>
-        <li><a href="#" class="filterMenu" data-id="directorGrafico">Diseño Gráfico SCL</a></li>
-
-        <li class="divider"></li>
-        <li><a href="#" class="filterMenu" data-id="directorExtension">Directora de Extensión y Ed. Continua</a></li>
-        <li><a href="#" class="filterMenu" data-id="subdirectorExtension">Sub Director de Extensión</a></li>
-        <li><a href="#" class="filterMenu" data-id="coordinadorExtensionCcp">Coordinador de Extensión CCP</a></li>
-        <li><a href="#" class="filterMenu" data-id="coordinadorExtensionScl">Coordinador de Extensión SCL</a></li>
-        
-        <li class="divider"></li>
-        <li><a href="#" class="filterMenu" data-id="coordinadorAcademicoCcp"> Coord. Académico CCP</a></li>
-        <li><a href="#" class="filterMenu" data-id="coordinadorAcademicoPCScl"> Coord. Académico SCL - Plan Común</a></li>
-        <li><a href="#" class="filterMenu" data-id="coordinadorAcademicoAOcl"> Coord. Académico SCL - Amb. y Objetos</a></li>
-        <li><a href="#" class="filterMenu" data-id="coordinadorAcademicoDScl"> Coord. Académico SCL - Digital</a></li>
-        <li><a href="#" class="filterMenu" data-id="coordinadorAcademicoGScl"> Coord. Académico SCL - Gráfico</a></li>
-        <li><a href="#" class="filterMenu" data-id="coordinadorAdmisionCcp"> Coord. de Admision CCP</a></li>
-        <li><a href="#" class="filterMenu" data-id="coordinadorAdmisionScl"> Coord. de Admision SCL</a></li>
-        <li><a href="#" class="filterMenu" data-id="coordinadorPlanificacion"> Coord. de Planificación y Desarrollo</a></li>
-        <li class="divider"></li>
-        <li><a href="#" class="filterMenu" data-id="investigador"> Investigador</a></li>
-    </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Acciones <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <div class="row" style="width: 400px;">
-                                    <ul class="list-unstyled col-md-4">
-                                        <li class="dropdown-header">Debilidad 01</li>
-                                        <li><a href="#">01</a>
-                                        </li>
-                                        <li><a href="#">02</a>
-                                        </li>
-                                        <li><a href="#">03</a>
-                                        </li>
-                                        <li><a href="#">04</a>
-                                        </li>
-                                        <li><a href="#">04</a>
-                                        </li>
-                                        <li class="divider"></li>
-
-                                        <li class="dropdown-header">Debilidad 02</li>
-                                        <li><a href="#">05</a>
-                                        </li>
-                                        <li><a href="#">06</a>
-                                        </li>
-                                        <li><a href="#">07</a>
-                                        </li>
-                                        <li><a href="#">08</a>
-                                        </li>
-                                        <li><a href="#">09</a>
-                                        </li>
-                                    </ul>
-                                    <ul class="list-unstyled col-md-4">
-                                       <li class="dropdown-header">Debilidad 03</li>
-                                        <li><a href="#">10</a>
-                                        </li>
-                                        <li><a href="#">11</a>
-                                        </li>
-                                        <li><a href="#">12</a>
-                                        </li>
-                                        <li><a href="#">13</a>
-                                        </li>
-                                        <li><a href="#">14</a>
-                                        </li>
-                                        <li class="divider"></li>
-
-                                        <li class="dropdown-header">Debilidad 04</li>
-                                        <li><a href="#">15</a>
-                                        </li>
-                                        <li><a href="#">16</a>
-                                        </li>
-                                        <li><a href="#">17</a>
-                                        </li>
-                                        <li><a href="#">18</a>
-                                        </li>
-                                        <li><a href="#">19</a>
-                                        </li>
-                                    </ul>
-                                    <ul class="list-unstyled col-md-4">
-                                       <li class="dropdown-header">Debilidad 05</li>
-                                        <li><a href="#">20</a>
-                                        </li>
-                                        <li><a href="#">21</a>
-                                        </li>
-                                        <li><a href="#">22</a>
-                                        </li>
-                                        <li><a href="#">23</a>
-                                        </li>
-                                        <li><a href="#">24</a>
-                                        </li>
-                                        <li class="divider"></li>
-
-                                        <li class="dropdown-header">Debilidad 06</li>
-                                        <li><a href="#">25</a>
-                                        </li>
-                                        <li><a href="#">26</a>
-                                        </li>
-    
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                
-
-            </div>
-            <!--/.nav-collapse -->
+            
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-    </nav>
+        <div id="navbar" class="navbar-collapse collapse pull-right">
+            <ul class="nav navbar-nav">
+                <li><a href="/" class="filterMenu" data-id="todos"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                <li><a data-toggle="collapse" data-target="#filterMenuHorizontal"><span class="glyphicon glyphicon-filter"></span> Ver Filtros</a></li>
+                <!--li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Responsables <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" class="filterMenu" data-id="todos">Ver todos</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Filtrar responsabilidades de:</li>
+                        <li><a href="#" class="filterMenu" data-id="Decano">Decano</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Vice Decano">Vice Decano</a></li>
+
+                        <li class="divider"></li>
+                        <li><a href="#" class="filterMenu" data-id="Director de Pregrado CCP">Director de Pregrado CCP</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Directora Plan Común SCL">Directora Plan Común SCL</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Director Ambientes y Objetos SCL">Director Ambientes y Objetos SCL</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Director Diseño Digital">Director Diseño Digital</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Directora Diseño Gráfico SCL">Directora Diseño Gráfico SCL</a></li>
+
+                        <li class="divider"></li>
+                        <li><a href="#" class="filterMenu" data-id="Directora de Extensión y Educación Continua">Directora de Extensión y Educación Continua</a></li>
+                        <li><a href="#" class="filterMenu" data-id="SubDirector de Extensión">SubDirector de Extensión</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Coordinador de Extensión CCP">Coordinador de Extensión CCP</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Coordinadora de Extensión SCL">Coordinadora de Extensión SCL</a></li>
+                        
+                        <li class="divider"></li>
+                        <li><a href="#" class="filterMenu" data-id="Coordinador Académico CCP"> Coordinador Académico CCP</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Coordinadora Académica SCL - Plan Común"> Coordinadora Académica SCL - Plan Común</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Coordinadora Académica SCL - Ambientes y Objetos"> Coordinadora Académica SCL - Ambientes y Objetos</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Coordinador Académico SCL - Digital"> Coordinador Académico SCL - Digital</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Coordinadora Académica SCL - Gráfico"> Coordinadora Académica SCL - Gráfico</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Coordinadora de Admision CCP"> Coordinadora de Admision CCP</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Coordinadora de Admision SCL"> Coordinadora de Admision SCL</a></li>
+                        <li><a href="#" class="filterMenu" data-id="Coordinadora de Planificación y Desarrollo"> Coordinadora de Planificación y Desarrollo</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#" class="filterMenu" data-id="Investigadores"> Investigadores</a></li>
+                    </ul>
+                </li-->
+            </ul>
+
+        </div>
+        <!--/.nav-collapse -->
+    </div><!--/.container -->
+    <div class="container">
+        <div class="row">
+            <ul id="filterMenuHorizontal" class="collapse-group collapse" aria-expanded="false">
+            
+                <li><a href="#" class="filterMenu selected" data-id="todos">Ver todos</a></li>
+                <li><a href="#" class="filterMenu" data-id="Decano">Decano</a></li>
+                <li><a href="#" class="filterMenu" data-id="Vice Decano">Vice Decano</a></li>
+                
+                <li><a href="#" class="filterMenu" data-id="Director de Pregrado CCP">Director de Pregrado CCP</a></li>
+                <li><a href="#" class="filterMenu" data-id="Directora Plan Común SCL">Directora Plan Común SCL</a></li>
+                <li><a href="#" class="filterMenu" data-id="Director Ambientes y Objetos SCL">Director Ambientes y Objetos SCL</a></li>
+                <li><a href="#" class="filterMenu" data-id="Director Diseño Digital">Director Diseño Digital</a></li>
+                <li><a href="#" class="filterMenu" data-id="Directora Diseño Gráfico SCL">Directora Diseño Gráfico SCL</a></li>
+            
+                <li><a href="#" class="filterMenu" data-id="Directora de Extensión y Educación Continua">Directora de Extensión y Educación Continua</a></li>
+                <li><a href="#" class="filterMenu" data-id="SubDirector de Extensión">SubDirector de Extensión</a></li>
+                <li><a href="#" class="filterMenu" data-id="Coordinador de Extensión CCP">Coordinador de Extensión CCP</a></li>
+                <li><a href="#" class="filterMenu" data-id="Coordinadora de Extensión SCL">Coordinadora de Extensión SCL</a></li>
+            
+                <li><a href="#" class="filterMenu" data-id="Coordinador Académico CCP"> Coordinador Académico CCP</a></li>
+                <li><a href="#" class="filterMenu" data-id="Coordinadora Académica SCL - Plan Común"> Coordinadora Académica SCL - Plan Común</a></li>
+                <li><a href="#" class="filterMenu" data-id="Coordinadora Académica SCL - Ambientes y Objetos"> Coordinadora Académica SCL - Ambientes y Objetos</a></li>
+                <li><a href="#" class="filterMenu" data-id="Coordinador Académico SCL - Digital"> Coordinador Académico SCL - Digital</a></li>
+                <li><a href="#" class="filterMenu" data-id="Coordinadora Académica SCL - Gráfico"> Coordinadora Académica SCL - Gráfico</a></li>
+                
+                <li><a href="#" class="filterMenu" data-id="Coordinadora de Admision CCP"> Coordinadora de Admision CCP</a></li>
+                <li><a href="#" class="filterMenu" data-id="Coordinadora de Admision SCL"> Coordinadora de Admision SCL</a></li>
+                <li><a href="#" class="filterMenu" data-id="Coordinadora de Planificación y Desarrollo"> Coordinadora de Planificación y Desarrollo</a></li>
+
+                <li><a href="#" class="filterMenu" data-id="Investigadores"> Investigadores</a></li>
+            
+            </ul>
+        </div>
+
+    </div>
+</nav>
 </template>

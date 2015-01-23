@@ -2,7 +2,7 @@ Mejoras = new Mongo.Collection('mejoras');
 
 if (Meteor.isClient) {
   Session.setDefault("filtroResponsables", "nadie");
-  Session.setDefault("editable", false);
+  Session.setDefault("editable", true)
 
   Template.Home.helpers({
     mejora: function() {
@@ -11,126 +11,126 @@ if (Meteor.isClient) {
       var ordenDescendente = {sort : { nactividad : 1 } }
 
       switch (filtroResponsables) {
-        case "decano":
+        case "Decano":
           return Mejoras.find({
-            "responsables.decano": true
+            "responsables.Decano": true
           }, ordenDescendente )
           break;
 
-        case "viceDecano":
+        case "Vice Decano":
           return Mejoras.find({
-            "responsables.viceDecano": true
+            "responsables.Vice Decano": true
           }, ordenDescendente )
           break;
 
-        case "directorPregradoCcp":
+        case "Director de Pregrado CCP":
           return Mejoras.find({
-            "responsables.directorPregradoCcp": true
-          }, ordenDescendente )
-          break;
-
-
-        case "directorPlanComunScl":
-          return Mejoras.find({
-            "responsables.directorPlanComunScl": true
-          }, ordenDescendente )
-          break;
-
-        case "directorAmbientesYObjetos":
-          return Mejoras.find({
-            "responsables.directorAmbientesYObjetos": true
-          }, ordenDescendente )
-          break;
-
-        case "directorDigital":
-          return Mejoras.find({
-            "responsables.directorDigital": true
-          }, ordenDescendente )
-          break;
-
-        case "directorGrafico":
-          return Mejoras.find({
-            "responsables.directorGrafico": true
-          }, ordenDescendente )
-          break;
-
-        case "directorExtension":
-          return Mejoras.find({
-            "responsables.directorExtension": true
+            "responsables.Director de Pregrado CCP": true
           }, ordenDescendente )
           break;
 
 
-        case "subdirectorExtension":
+        case "Directora Plan Común SCL":
           return Mejoras.find({
-            "responsables.subdirectorExtension": true
+            "responsables.Directora Plan Común SCL": true
           }, ordenDescendente )
           break;
 
-        case "coordinadorExtensionCcp":
+        case "Director Ambientes y Objetos SCL":
           return Mejoras.find({
-            "responsables.coordinadorExtensionCcp": true
+            "responsables.Director Ambientes y Objetos SCL": true
           }, ordenDescendente )
           break;
 
-        case "coordinadorExtensionScl":
+        case "Director Diseño Digital":
           return Mejoras.find({
-            "responsables.coordinadorExtensionScl": true
+            "responsables.Director Diseño Digital": true
           }, ordenDescendente )
           break;
 
-        case "coordinadorAcademicoCcp":
+        case "Directora Diseño Gráfico SCL":
           return Mejoras.find({
-            "responsables.coordinadorAcademicoCcp": true
+            "responsables.Directora Diseño Gráfico SCL": true
           }, ordenDescendente )
           break;
 
-        case "coordinadorAcademicoPCScl":
+        case "Directora de Extensión y Educación Continua":
           return Mejoras.find({
-            "responsables.coordinadorAcademicoPCScl": true
-          }, ordenDescendente )
-          break;
-
-        case "coordinadorAcademicoAOcl":
-          return Mejoras.find({
-            "responsables.coordinadorAcademicoAOcl": true
+            "responsables.Directora de Extensión y Educación Continua": true
           }, ordenDescendente )
           break;
 
 
-        case "coordinadorAcademicoDScl":
+        case "SubDirector de Extensión":
           return Mejoras.find({
-            "responsables.coordinadorAcademicoDScl": true
+            "responsables.SubDirector de Extensión": true
           }, ordenDescendente )
           break;
 
-        case "coordinadorAcademicoGScl":
+        case "Coordinador de Extensión CCP":
           return Mejoras.find({
-            "responsables.coordinadorAcademicoGScl": true
+            "responsables.Coordinador de Extensión CCP": true
           }, ordenDescendente )
           break;
 
-        case "coordinadorAdmisionCcp":
+        case "Coordinadora de Extensión SCL":
           return Mejoras.find({
-            "responsables.coordinadorAdmisionCcp": true
+            "responsables.Coordinadora de Extensión SCL": true
           }, ordenDescendente )
           break;
 
-                  case "coordinadorAdmisionScl":
+        case "Coordinador Académico CCP":
           return Mejoras.find({
-            "responsables.coordinadorAdmisionScl": true
+            "responsables.Coordinador Académico CCP": true
           }, ordenDescendente )
           break;
 
-                  case "coordinadorPlanificacion":
+        case "Coordinadora Académica SCL - Plan Común":
           return Mejoras.find({
-            "responsables.coordinadorPlanificacion": true
+            "responsables.Coordinadora Académica SCL - Plan Común": true
           }, ordenDescendente )
           break;
 
-                  case "investigador":
+        case "Coordinadora Académica SCL - Ambientes y Objetos":
           return Mejoras.find({
-            "responsables.investigador": true
+            "responsables.Coordinadora Académica SCL - Ambientes y Objetos": true
+          }, ordenDescendente )
+          break;
+
+
+        case "Coordinador Académico SCL - Digital":
+          return Mejoras.find({
+            "responsables.Coordinador Académico SCL - Digital": true
+          }, ordenDescendente )
+          break;
+
+        case "Coordinadora Académica SCL - Gráfico":
+          return Mejoras.find({
+            "responsables.Coordinadora Académica SCL - Gráfico": true
+          }, ordenDescendente )
+          break;
+
+        case "Coordinadora de Admision CCP":
+          return Mejoras.find({
+            "responsables.Coordinadora de Admision CCP": true
+          }, ordenDescendente )
+          break;
+
+        case "Coordinadora de Admision SCL":
+          return Mejoras.find({
+            "responsables.Coordinadora de Admision SCL": true
+          }, ordenDescendente )
+          break;
+
+        case "Coordinadora de Planificación y Desarrollo":
+          return Mejoras.find({
+            "responsables.Coordinadora de Planificación y Desarrollo": true
+          }, ordenDescendente )
+          break;
+
+        case "Investigadores":
+          return Mejoras.find({
+            "responsables.Investigadores": true
           }, ordenDescendente )
           break;
 
@@ -174,6 +174,7 @@ if (Meteor.isClient) {
   Router.route('/mejora/:_id', function() {
     this.render('Mejora', {
       data: function() {
+        Session.set("editable", false);
         return Mejoras.findOne({
           _id: this.params._id
         });
@@ -184,6 +185,7 @@ if (Meteor.isClient) {
   Router.route('/edicion/:_id', function() {
     this.render('Edita', {
       data: function() {
+        Session.set("editable", true);
         return Mejoras.findOne({
           _id: this.params._id
         });
@@ -208,64 +210,30 @@ if (Meteor.isClient) {
         }
       }
     },
-
-    'click2 .saveButton': function(event) {
-
-      /*
-      var _id = this._id;
-
-      var _ndebilidad = document.getElementsByName("v_ndebilidad").value;
-      var _naccion = document.getElementsByName("v_naccion").value;
-      var _estado = document.getElementsByName("v_estado").value;
-      var _descripcion = document.getElementsByName("v_descripcion").value;
-      var _objetivos = document.getElementsByName("v_objetivos").value;
-      var _accion = document.getElementsByName("v_accion").value;
-      var _indicador = document.getElementsByName("v_indicador").value;
-      var _meta = document.getElementsByName("v_meta").value;
-      var _plazo = document.getElementsByName("v_plazo").value;
-      var _presupuesto = document.getElementsByName("v_presupuesto").value;
-      var _responsable = document.getElementsByName("v_responsable[]");
-      var _avance = document.getElementsByName("v_avance").value;
-
-      var _responsables = {}
-
-      for (k = 0; k < _responsable.length; k++) {
-        _responsables[_responsable[k].value] = _responsable[k].checked;
-      }
-
-      var updateData = {
-        ndebilidad: _ndebilidad,
-        naccion: _naccion,
-        estado: _estado,
-        descripcion: _descripcion,
-        objetivos: _objetivos,
-        accion: _accion,
-        indicador: _indicador,
-        meta: _meta,
-        plazo: _plazo,
-        presupuesto: _presupuesto,
-        responsables: _responsables,
-        avance: _avance,
-        revision: new Date()
-
-      }
-      console.log(updateData);
-      */
-
-    },
     'click .filterMenu': function(event) {
       //console.log(event.target.dataset.id)
       Session.set("filtroResponsables", event.target.dataset.id);
+    },
+    'click .returnHome': function(){
+      Session.set('returnHome', true);
+    },
+    'click #filterMenuHorizontal li a': function(event){
+      console.log(event.target)
+      $("#filterMenuHorizontal li a").removeClass('selected')
+      $(event.target).addClass('selected')
     }
   });
 
   
   Template.nav.helpers({
-    'editable': function(){
-      if(!Session.get("editable")){
-        return 'disabled';
-      }
-    }
+    'isEditable': function(){
+      return Session.get("editable");
+    },
+    'ruta' : function(){
+        var routeName = Router.current().route.getName()
+        return routeName;
+     }
+
   });
 
   Template.mejoraForm.helpers({
@@ -383,10 +351,7 @@ if (Meteor.isClient) {
         }, 2000 );
 
       }
-
       
-      
-
       if (_id == undefined) {
         console.log("New entry, therefore insert");
         Mejoras.insert(newData, function(err, newId) {
@@ -400,7 +365,11 @@ if (Meteor.isClient) {
         Mejoras.update(_id, {
           $set: newData
         });
-        //Router.go('/');
+        if (Session.get('returnHome')){
+          Session.set('returnHome', false)
+          Router.go('/');
+         }
+        
       }
 
     }
@@ -473,6 +442,12 @@ UI.registerHelper('arrayify', function(obj) {
   return result;
 });
 
+UI.registerHelper('ifRouteIs', function (routeName, options) { 
+  if (Meteor.Router.page() === routeName) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
 
 Meteor.methods({
   guardarAccion: function(mejoraId, newData) {

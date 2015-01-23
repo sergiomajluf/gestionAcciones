@@ -20,23 +20,26 @@
 <template name="Home">
     {{> nav}}
     <div class="container">
-    	<h2>Responsabilidades asignadas a <span class="text-capitalize">{{responsableActual}}</span></h2>
+    	<h3>Responsabilidades asignadas a <span class="text-uppercase">{{responsableActual}}</span></h3>
         <ul class="list-group" id="mejoras">
             {{#each mejora}}
             <li class="list-group-item mejora" data-category="{{#each arrayify responsables}}{{#if value}}{{name}} {{/if}}{{/each}}">
                 <div class="row">
                     <div class="col-sm-1 col-md-1 col-lg-1">
-                        <img src="/img/{{estado}}.png" alt="{{estado}}">
+                        <a href="/edicion/{{_id}}"><img src="/img/{{estado}}.png" title="Editar" alt="{{estado}}"></a>
                     </div>
-                    <div class="col-xs-11 col-lg-11">
-                        <h4 class="list-group-item-heading">{{nactividad}} » <strong><a href="/mejora/{{_id}}">{{accion}}</a></strong></h4>
+                    <div class="col-xs-9 col-lg-9">
+                        <h4 class="list-group-item-heading">{{nactividad}} » <strong><a href="/edicion/{{_id}}" title="Editar">{{accion}}</a></strong></h4>
                         <p class="list-group-item-text">- editado: {{formatDate revision "short"}}
-                            <a href="/edicion/{{_id}}">[ edit ]</a></p>
+                            <!--a href="/edicion/{{_id}}" title="Editar">[ edit ]</a--></p>
                          <p class="list-group-item-text"><small>- asignado a:
                             {{#each arrayify responsables}}
                                 {{#if value}}{{name}}, {{/if}}
                             {{/each}}</small>
                     </p>
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2">
+                        <h6>Plazo:</h6>{{plazo}}
                     </div>
                 </div>            
             </li>
@@ -46,10 +49,12 @@
     {{> footer}}
 </template>
 
+
+
 <template name="Mejora">
     {{> nav}}
     <div class="container">
-        {{> mejoraShow }}
+        {{> mejoraForm}}
     </div>
     {{> footer}}
 </template>
