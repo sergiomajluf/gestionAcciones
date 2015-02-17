@@ -17,50 +17,64 @@
 <body>
 </body>
 
+<template name="searchy">
+  <h1>Searchy</h1>
+  <input id="search" name="search" />
+  <ul>
+    {{#each items}}
+      <li>{{name}}</li>
+    {{/each}}
+  </ul>
+</template>
+
+
 <template name="Home">
     {{> nav}}
     <div class="container">
         <h2>Plan de Desarrollo 2013-2018</h2>
     	<h3>Responsabilidades asignadas a <span class="text-uppercase">{{responsableActual}}</span></h3>
-        
-        <table id="mejoras" class="table table-responsive">
-            <thead>
-                <tr>
-                    <td class="filtroEstado" width="150px">
-                        <a href="#" class="filterMenu selected" data-id="todos">TODOS</a> 
-                        <a href="#" class="filterMenu" data-id="rojo"> Rojo</a>
-                        <a href="#" class="filterMenu" data-id="amarillo"> Amarillo</a> 
-                        <a href="#" class="filterMenu" data-id="verde"> Verde</a>
-                    </td>
-                    <th colspan="2">
+    
+        <ul class="list-group searchable" id="mejoras">
+            <li class="list-group-item">
+                <div class="form-group row">  
+                    <div class="col-sm-1 col-md-1 col-lg-1">
+                    </div>
+                    <div class="col-xs-9 col-lg-9">
                         <input id="searchInput" class="form-control" type="search" placeholder="Buscar..." />
-                    </th>
-                </tr>
-                <tr>
-                    <th>&nbsp;</th>
-                    <th>Acción y Objetivos</th>
-                    <th>Plazo</th>
-                </tr>
-            </thead>
-            <tbody id="fbody">
+                    </div>
+                </div>
+            </li>
+
+
             {{#each mejora}}
-
-                <tr class="mejora fade-in" data-category="{{estado}} {{#each arrayify responsables}}{{#if value}}{{name}} {{/if}}{{/each}}">
-                    <td width="130px">
-                        <a href="/edicion/{{_id}}" class="{{estado}} limitWidth">{{nactividad}}</a>
-                    </td>
-                    <td>
+            <li class="list-group-item mejora fade-in " data-category="{{#each arrayify responsables}}{{#if value}}{{name}} {{/if}}{{/each}}">
+                <div class="row">
+                    <div class="col-sm-1 col-md-1 col-lg-1">
+                        <!--<a href="/edicion/{{_id}}"><img src="/img/{{estado}}.png" title="Editar" alt="{{estado}}"></a>
+                        -->
+                        <a href="/edicion/{{_id}}" class="{{estado}}">{{nactividad}}</a>
+                    </div>
+                    <div class="col-xs-9 col-lg-9">
                         <h4 class="list-group-item-heading"><strong><a href="/edicion/{{_id}}" title="Editar">{{accion}}</a><br/><small><strong>{{objetivoGeneral}}</strong><br/>{{objetivoEspecifico}}</small></strong></h4>
-                        <p class="list-group-item-text"><small>Editado: {{formatDate revision "short"}}</small></p>
-                    </td>
-                    <td>
-                        <h6>Plazo:</h6><span>{{plazo}}</span>
-                    </td>
-                </tr>          
-            {{/each}}
-            </tbody>
+                        
+                        <!--
+                        <p class="list-group-item-text"><small>Asignado a:
+                            {{#each arrayify responsables}}
+                                {{#if value}}{{name}}, {{/if}}
+                            {{/each}}</small>
+                        </p>
+                        -->
 
-        </table>
+                        <p class="list-group-item-text"><small>Editado: {{formatDate revision "short"}}</small></p>
+
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2">
+                        <h6>Plazo:</h6><span>{{plazo}}</span>
+                    </div>
+                </div>            
+            </li>
+            {{/each}}
+        </ul>
         
     </div>
     {{> footer}}

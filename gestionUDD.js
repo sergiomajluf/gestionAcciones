@@ -1,7 +1,7 @@
 Mejoras = new Mongo.Collection('mejoras');
 
 if (Meteor.isClient) {
-  Session.setDefault("filtroResponsables", "nadie");
+  Session.setDefault("filtroResponsables", "todos");
   Session.setDefault("editable", true)
 
   Template.Home.helpers({
@@ -134,6 +134,24 @@ if (Meteor.isClient) {
           }, ordenDescendente )
           break;
 
+        case "rojo":
+          return Mejoras.find({
+            "estado": "rojo"
+          }, ordenDescendente )
+          break;
+
+        case "amarillo":
+          return Mejoras.find({
+            "estado": "amarillo"
+          }, ordenDescendente )
+          break;
+
+        case "verde":
+          return Mejoras.find({
+            "estado": "verde"
+          }, ordenDescendente )
+          break;
+
 
         default:
           return Mejoras.find({}, ordenDescendente )
@@ -149,7 +167,35 @@ if (Meteor.isClient) {
       return Session.get("filtroResponsables")
     }
   });
+  
+  Template.Home.rendered = function () {
+    // CSS modification from http://kilianvalkhof.com/uploads/listfilter
+    jQuery.expr[':'].Contains = function(a,i,m){
+        return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+    };
+    
+    // JQuery search from http://jsfiddle.net/tXNQd/122/
+    // and http://stackoverflow.com/questions/17074687/filtering-table-rows-using-jquery
 
+    $("#searchInput").keyup(function () {
+      var rows = $("#mejoras").find(" #fbody tr").hide();
+      if (this.value.length) {
+          var data = this.value.split(" ");
+          $.each(data, function (i, v) {
+              rows.filter(":Contains('" + v + "')").show();
+          });
+      } else rows.show();
+    });
+  };
+
+  Template.Home.events({
+    'click .filterMenu': function(event) {
+      //console.log(event.target.dataset.id)
+      Session.set("filtroResponsables", event.target.dataset.id);
+      $(".filterMenu").removeClass('selected');
+      $(event.target).addClass('selected');
+    }
+  })
 
   Template.mejoraShow.helpers({
     muestraResponsables: function() {
@@ -218,7 +264,7 @@ if (Meteor.isClient) {
       Session.set('returnHome', true);
     },
     'click #filterMenuHorizontal li a': function(event){
-      console.log(event.target)
+      //console.log(event.target)
       $("#filterMenuHorizontal li a").removeClass('selected')
       $(event.target).addClass('selected')
     }
@@ -301,7 +347,7 @@ if (Meteor.isClient) {
       event.preventDefault();
 
       var _id = this._id;
-      var _nactividad = event.target.v_actividad.value;
+      var _nactividad = Number(event.target.v_actividad.value);
       var _estado = event.target.v_estado.value;
       var _lineamiento = event.target.v_lineamiento.value;
       var _area = event.target.v_area.value;
@@ -376,7 +422,6 @@ if (Meteor.isClient) {
   });
 
 
-  
 
 function submitme() {
     form={};
@@ -399,7 +444,7 @@ function submitme() {
     //     }
     // });
 
-}
+  }
 
 }
 
