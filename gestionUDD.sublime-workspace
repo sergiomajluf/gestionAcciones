@@ -1,0 +1,736 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"v",
+				"val	.val()"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"te",
+				"text-transform"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"eve",
+				"events	Meteor: Template.myTemplate.events(eventMap)"
+			],
+			[
+				"key",
+				"keyup	.keyup()"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"user",
+				"userId	Meteor: this.userId"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"tra",
+				"translate"
+			],
+			[
+				"tran",
+				"transform"
+			],
+			[
+				"wid",
+				"widthScale"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"M",
+				"myData"
+			],
+			[
+				"selec",
+				"selectAll"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"sele",
+				"selectAll"
+			],
+			[
+				"sel",
+				"selectAll"
+			],
+			[
+				"GetCo",
+				"GetComponent	type"
+			],
+			[
+				"De",
+				"Debug"
+			],
+			[
+				"wr",
+				"write"
+			],
+			[
+				"write",
+				"writeHead"
+			],
+			[
+				"file",
+				"files"
+			],
+			[
+				"form",
+				"formidable"
+			],
+			[
+				"for",
+				"formidable"
+			],
+			[
+				"w",
+				"write"
+			],
+			[
+				"wri",
+				"writeHead"
+			],
+			[
+				"pos",
+				"postData"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"get",
+				"getTime"
+			],
+			[
+				"thi",
+				"thingToSpin"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "gestionUDD.js",
+			"settings":
+			{
+				"buffer_size": 278,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/mejoraForm.js",
+			"settings":
+			{
+				"buffer_size": 2824,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/router.js",
+			"settings":
+			{
+				"buffer_size": 741,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gestionUDD.html",
+			"settings":
+			{
+				"buffer_size": 523,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/mejoraForm.html",
+			"settings":
+			{
+				"buffer_size": 15820,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/client.js",
+			"settings":
+			{
+				"buffer_size": 1056,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 207.0,
+		"selected_items":
+		[
+			[
+				"pretty",
+				"HTMLPrettify"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"retty",
+				"HTMLPrettify"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"bs tav",
+				"Snippet: bs3-table-hover"
+			],
+			[
+				"b3 sea",
+				"Snippet: bs3-input-search"
+			],
+			[
+				"templa",
+				"Snippet: bs3-html5-template"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"bs3 pane",
+				"Snippet: bs3-panel"
+			],
+			[
+				"bs3 tem",
+				"Snippet: bs3-html5-template"
+			],
+			[
+				"bs3",
+				"Snippet: bs3-col-3"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pre",
+				"Preview"
+			],
+			[
+				"tem",
+				"Create file from Template"
+			],
+			[
+				"previ",
+				"Preview"
+			],
+			[
+				"set syntax: ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"templ",
+				"Create file from Template"
+			],
+			[
+				"prett",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"sidebar",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"side",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"tid",
+				"TidyHTML"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"POack",
+				"Package Control: Install Package"
+			],
+			[
+				"Packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Set",
+				"Set Syntax: C#"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			]
+		],
+		"width": 710.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/client.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/server/server.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/private/old.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/private/nuevaAccion.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/private/mejoraShow.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/formContainer.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/home.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/mejoraForm.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/_formContainer.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/_mejora.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/_home.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/_edita.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/mejora.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/private/nuevaAccion2.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/edita.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/mejoraForm.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/nueva.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/listaResponsables.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/footer.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/gestionUDD.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/templates/nav.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/templates/mejoraForm.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/gestionUDD.css",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/templates/home.html",
+		"/Users/sergiomajluf/Sites/thesis/03-hackpad/views/dashboard.jade",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/gestionUDD.bkp",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/router.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/templates/nav.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/templates/home.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/templates/searchForm.html",
+		"/Users/sergiomajluf/Sites/meteorApps/simple-todos/simple-todos.css",
+		"/Users/sergiomajluf/Sites/meteorApps/touch_example/touch_example.css",
+		"/Users/sergiomajluf/Sites/lab/instafeed/index.html",
+		"/Users/sergiomajluf/Downloads/Valentines.html",
+		"/Users/sergiomajluf/Downloads/schematica_code-master/client/position/position.js",
+		"/Users/sergiomajluf/Sites/disenochileno/mongopd.coffee",
+		"/Users/sergiomajluf/Sites/disenochileno/dump/disenochileno_meteor_com/posts.bson",
+		"/Users/sergiomajluf/Sites/lab/d3/001/index.html",
+		"/Users/sergiomajluf/Sites/lab/d3/09.html",
+		"/Users/sergiomajluf/Sites/lab/d3/style.css",
+		"/Users/sergiomajluf/Sites/lab/d3/11.html",
+		"/Users/sergiomajluf/Sites/lab/d3/10.html",
+		"/Users/sergiomajluf/Sites/lab/d3/02.html",
+		"/Users/sergiomajluf/Sites/lab/perspective/viz/data/user_document.json",
+		"/Users/sergiomajluf/Sites/lab/perspective/viz/mydata.json",
+		"/Users/sergiomajluf/Sites/lab/perspective/viz/data/user_document-TRUNK.json",
+		"/Users/sergiomajluf/Sites/lab/perspective/viz/user_document.json",
+		"/Users/sergiomajluf/Sites/lab/perspective/viz/02.html",
+		"/Users/sergiomajluf/Sites/lab/perspective/viz/4.html",
+		"/Users/sergiomajluf/Sites/lab/perspective/viz/0.html",
+		"/Users/sergiomajluf/Sites/lab/perspective/viz/2.html",
+		"/Users/sergiomajluf/Sites/lab/perspective/viz/3.html",
+		"/Users/sergiomajluf/Sites/lab/perspective/viz/index.html",
+		"/Users/sergiomajluf/Sites/lab/perspective/viz/data/data.json",
+		"/Users/sergiomajluf/Library/Application Support/Sublime Text 2/Packages/Preview/Preview.sublime-settings",
+		"/Users/sergiomajluf/Library/Application Support/Sublime Text 2/Packages/User/Preview.sublime-settings",
+		"/Users/sergiomajluf/Dropbox/Processing/_ITP/Data-Representation/hotel-data/hydrozoa.json",
+		"/Users/sergiomajluf/Sites/lab/spacebrew/node_persistent_admin.js",
+		"/Users/sergiomajluf/Sites/lab/spacebrew/package.json",
+		"/Users/sergiomajluf/Sites/lab/spacebrew/node_server.js",
+		"/Users/sergiomajluf/Sites/lab/spacebrew/node_server_forever.js",
+		"/Users/sergiomajluf/Sites/lab/spacebrew/node_persistent_live.js",
+		"/Users/sergiomajluf/Sites/lab/spacebrew/spacebrew.sublime-project",
+		"/Users/sergiomajluf/Sites/lab/expanse/readme.md",
+		"/Users/sergiomajluf/Sites/lab/node/fileServer.js",
+		"/Users/sergiomajluf/Sites/lab/node/helloworld.js",
+		"/Users/sergiomajluf/Library/Application Support/Sublime Text 2/Packages/C#/Build.tmLanguage",
+		"/Users/sergiomajluf/Documents/UnityProjects/Begginer/Assets/Webcam.cs",
+		"/Users/sergiomajluf/Downloads/piconnect_03.py",
+		"/Users/sergiomajluf/Sites/santiagoamil.cl/wp-content/themes/stgoamil2013/wp-advanced-search-master/README.md",
+		"/Users/sergiomajluf/Sites/santiagoamil.cl/wp-content/themes/stgoamil2013/category-encuentros-de-trasnoche-2013.php",
+		"/Users/sergiomajluf/Library/Application Support/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"submitme",
+			"mejora",
+			"nadie",
+			"data",
+			"xSpeed",
+			"#",
+			"#ping"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "gestionUDD.js",
+					"settings":
+					{
+						"buffer_size": 278,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/mejoraForm.js",
+					"settings":
+					{
+						"buffer_size": 2824,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/router.js",
+					"settings":
+					{
+						"buffer_size": 741,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								554,
+								554
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "gestionUDD.html",
+					"settings":
+					{
+						"buffer_size": 523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								526,
+								526
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/mejoraForm.html",
+					"settings":
+					{
+						"buffer_size": 15820,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/client.js",
+					"settings":
+					{
+						"buffer_size": 1056,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								680,
+								680
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 148.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"open",
+				"/Users/sergiomajluf/Documents/UnityProjects/Begginer/Assets/Scenes/04-scripts-and-objects.unity"
+			],
+			[
+				"",
+				"untitled"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 255.0,
+	"status_bar_visible": true
+}
