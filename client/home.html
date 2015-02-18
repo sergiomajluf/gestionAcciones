@@ -2,7 +2,7 @@
     {{> nav}}
     <div class="container">
         <h2>Plan de Desarrollo 2013-2018</h2>
-    	<h3>Responsabilidades asignadas a <span class="text-uppercase">{{responsableActual}}</span></h3>
+    	<h3>{{resultados}} responsabilidades asignadas a <span class="text-uppercase">{{responsableActual}}</span></h3>
         
         <table id="mejoras" class="table table-responsive">
             <thead>
@@ -31,7 +31,7 @@
                         <a href="/edicion/{{_id}}" class="{{estado}} limitWidth">{{nactividad}}</a>
                     </td>
                     <td>
-                        <h4 class="list-group-item-heading"><strong><a href="/edicion/{{_id}}" title="Editar">{{accion}}</a><br/><small><strong>{{objetivoGeneral}}</strong><br/>{{objetivoEspecifico}}</small></strong></h4>
+                        <h4 class="list-group-item-heading"><strong><a href="/edicion/{{_id}}" title="Editar">{{accion}}</a><br/><small><strong>{{objetivoEspecifico}}</strong><br/>{{objetivoGeneral}}</small></strong></h4>
                         <p class="list-group-item-text"><small>Editado: {{formatDate revision "short"}}</small></p>
                     </td>
                     <td>

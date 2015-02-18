@@ -1,5 +1,6 @@
  Session.setDefault("filtroResponsables", "todos");
  Session.setDefault("editable", true)
+ Session.setDefault("filterResults", Mejoras.find().count())
 
  // Use UI.registerHelper.
  var DateFormats = {
@@ -27,7 +28,7 @@
          checked: 'checked'
      } : '';
  });
- 
+
  UI.registerHelper('arrayify', function(obj) {
      result = [];
      for (var key in obj) result.push({

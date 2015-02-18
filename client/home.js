@@ -10,18 +10,21 @@ Template.Home.helpers({
 
         switch (filtroResponsables) {
             case "Decano":
+                Session.set("filterResults", Mejoras.find({"responsables.Decano": true}).count());
                 return Mejoras.find({
                     "responsables.Decano": true
                 }, ordenDescendente)
                 break;
 
             case "Vice Decano":
+                Session.set("filterResults", Mejoras.find({"responsables.Vice Decano": true}).count());
                 return Mejoras.find({
                     "responsables.Vice Decano": true
                 }, ordenDescendente)
                 break;
 
             case "Director de Pregrado CCP":
+                Session.set("filterResults", Mejoras.find({"responsables.Director de Pregrado CCP": true}).count());
                 return Mejoras.find({
                     "responsables.Director de Pregrado CCP": true
                 }, ordenDescendente)
@@ -29,30 +32,35 @@ Template.Home.helpers({
 
 
             case "Directora Plan Común SCL":
+                Session.set("filterResults", Mejoras.find({"responsables.Directora Plan Común SCL": true}).count());
                 return Mejoras.find({
                     "responsables.Directora Plan Común SCL": true
                 }, ordenDescendente)
                 break;
 
             case "Director Ambientes y Objetos SCL":
+                Session.set("filterResults", Mejoras.find({"responsables.Director Ambientes y Objetos SCL": true}).count());
                 return Mejoras.find({
                     "responsables.Director Ambientes y Objetos SCL": true
                 }, ordenDescendente)
                 break;
 
             case "Director Diseño Digital":
+                Session.set("filterResults", Mejoras.find({"responsables.Director Diseño Digital": true}).count());
                 return Mejoras.find({
                     "responsables.Director Diseño Digital": true
                 }, ordenDescendente)
                 break;
 
             case "Directora Diseño Gráfico SCL":
+                Session.set("filterResults", Mejoras.find({"responsables.Directora Diseño Gráfico SCL": true}).count());
                 return Mejoras.find({
                     "responsables.Directora Diseño Gráfico SCL": true
                 }, ordenDescendente)
                 break;
 
             case "Directora de Extensión y Educación Continua":
+                Session.set("filterResults", Mejoras.find({"responsables.Directora de Extensión y Educación Continua": true}).count());
                 return Mejoras.find({
                     "responsables.Directora de Extensión y Educación Continua": true
                 }, ordenDescendente)
@@ -60,36 +68,42 @@ Template.Home.helpers({
 
 
             case "SubDirector de Extensión":
+                Session.set("filterResults", Mejoras.find({"responsables.SubDirector de Extensión": true}).count());
                 return Mejoras.find({
                     "responsables.SubDirector de Extensión": true
                 }, ordenDescendente)
                 break;
 
             case "Coordinador de Extensión CCP":
+                Session.set("filterResults", Mejoras.find({"responsables.Coordinador de Extensión CCP": true}).count());
                 return Mejoras.find({
                     "responsables.Coordinador de Extensión CCP": true
                 }, ordenDescendente)
                 break;
 
             case "Coordinadora de Extensión SCL":
+                Session.set("filterResults", Mejoras.find({"responsables.Coordinadora de Extensión SCL": true}).count());
                 return Mejoras.find({
                     "responsables.Coordinadora de Extensión SCL": true
                 }, ordenDescendente)
                 break;
 
             case "Coordinador Académico CCP":
+                Session.set("filterResults", Mejoras.find({"responsables.Coordinador Académico CCP": true}).count());
                 return Mejoras.find({
                     "responsables.Coordinador Académico CCP": true
                 }, ordenDescendente)
                 break;
 
             case "Coordinadora Académica SCL - Plan Común":
+                Session.set("filterResults", Mejoras.find({"responsables.Coordinadora Académica SCL - Plan Común": true}).count());
                 return Mejoras.find({
                     "responsables.Coordinadora Académica SCL - Plan Común": true
                 }, ordenDescendente)
                 break;
 
             case "Coordinadora Académica SCL - Ambientes y Objetos":
+                Session.set("filterResults", Mejoras.find({"responsables.Coordinadora Académica SCL - Ambientes y Objetos": true}).count());
                 return Mejoras.find({
                     "responsables.Coordinadora Académica SCL - Ambientes y Objetos": true
                 }, ordenDescendente)
@@ -97,54 +111,63 @@ Template.Home.helpers({
 
 
             case "Coordinador Académico SCL - Digital":
+                Session.set("filterResults", Mejoras.find({"responsables.Coordinador Académico SCL - Digital": true}).count());
                 return Mejoras.find({
                     "responsables.Coordinador Académico SCL - Digital": true
                 }, ordenDescendente)
                 break;
 
             case "Coordinadora Académica SCL - Gráfico":
+                Session.set("filterResults", Mejoras.find({"responsables.Coordinadora Académica SCL - Gráfico": true}).count());
                 return Mejoras.find({
                     "responsables.Coordinadora Académica SCL - Gráfico": true
                 }, ordenDescendente)
                 break;
 
             case "Coordinadora de Admision CCP":
+                Session.set("filterResults", Mejoras.find({"responsables.Coordinadora de Admision CCP": true}).count());
                 return Mejoras.find({
                     "responsables.Coordinadora de Admision CCP": true
                 }, ordenDescendente)
                 break;
 
             case "Coordinadora de Admision SCL":
+                Session.set("filterResults", Mejoras.find({"responsables.Coordinadora de Admision SCL": true}).count());
                 return Mejoras.find({
                     "responsables.Coordinadora de Admision SCL": true
                 }, ordenDescendente)
                 break;
 
             case "Coordinadora de Planificación y Desarrollo":
+                Session.set("filterResults", Mejoras.find({"responsables.Coordinadora de Planificación y Desarrollo": true}).count());
                 return Mejoras.find({
                     "responsables.Coordinadora de Planificación y Desarrollo": true
                 }, ordenDescendente)
                 break;
 
             case "Investigadores":
+                Session.set("filterResults", Mejoras.find({"responsables.Investigadores": true}).count());
                 return Mejoras.find({
                     "responsables.Investigadores": true
                 }, ordenDescendente)
                 break;
 
             case "rojo":
+                Session.set("filterResults", Mejoras.find({"estado": "rojo"}).count());
                 return Mejoras.find({
                     "estado": "rojo"
                 }, ordenDescendente)
                 break;
 
             case "amarillo":
+                Session.set("filterResults", Mejoras.find({"estado": "amarillo"}).count());
                 return Mejoras.find({
                     "estado": "amarillo"
                 }, ordenDescendente)
                 break;
 
             case "verde":
+                Session.set("filterResults", Mejoras.find({"estado": "verde"}).count());
                 return Mejoras.find({
                     "estado": "verde"
                 }, ordenDescendente)
@@ -152,6 +175,7 @@ Template.Home.helpers({
 
 
             default:
+                Session.set("filterResults", Mejoras.find().count());
                 return Mejoras.find({}, ordenDescendente)
 
         }
@@ -163,6 +187,9 @@ Template.Home.helpers({
     },
     responsableActual: function() {
         return Session.get("filtroResponsables")
+    },
+    resultados: function(){
+        return Session.get("filterResults")
     }
 });
 
