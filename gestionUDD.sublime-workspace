@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"bac",
+				"background-color"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
 				"v",
 				"val	.val()"
 			],
@@ -164,10 +172,50 @@
 	"buffers":
 	[
 		{
-			"file": "gestionUDD.js",
+			"file": "client/home.js",
 			"settings":
 			{
-				"buffer_size": 278,
+				"buffer_size": 9705,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/home.html",
+			"settings":
+			{
+				"buffer_size": 2351,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/main.js",
+			"settings":
+			{
+				"buffer_size": 1116,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gestionUDD.css",
+			"settings":
+			{
+				"buffer_size": 4435,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/nav.html",
+			"settings":
+			{
+				"buffer_size": 8834,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/server.js",
+			"settings":
+			{
+				"buffer_size": 419,
 				"line_ending": "Unix"
 			}
 		},
@@ -175,39 +223,7 @@
 			"file": "client/mejoraForm.js",
 			"settings":
 			{
-				"buffer_size": 2824,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/router.js",
-			"settings":
-			{
-				"buffer_size": 741,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "gestionUDD.html",
-			"settings":
-			{
-				"buffer_size": 523,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/mejoraForm.html",
-			"settings":
-			{
-				"buffer_size": 15820,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/client.js",
-			"settings":
-			{
-				"buffer_size": 1056,
+				"buffer_size": 2910,
 				"line_ending": "Unix"
 			}
 		}
@@ -223,8 +239,24 @@
 				"HTMLPrettify"
 			],
 			[
+				"prtty",
+				"Snippet: Prototype"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"collaps",
+				"Snippet: new Mongo.Collection(name, [options])"
+			],
+			[
 				"js",
 				"Set Syntax: JavaScript"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
 			],
 			[
 				"json",
@@ -271,10 +303,6 @@
 				"Set Syntax: PHP"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"inst",
 				"Package Control: Install Package"
 			],
@@ -305,10 +333,6 @@
 			[
 				"templ",
 				"Create file from Template"
-			],
-			[
-				"prett",
-				"Pretty JSON: Reformat (Pretty Print) JSON"
 			],
 			[
 				"sidebar",
@@ -376,14 +400,24 @@
 	},
 	"file_history":
 	[
+		"/Users/sergiomajluf/Sites/meteorApps/node_modules/bootstrap/docs/_jade/customizer-nav.jade",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/server/private/respaldo-db-20150220.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/gestionUDD.sublime-project",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/.meteor/versions",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/gestionUDD.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/lib/router.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/mejoraForm.html",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/mejoraForm.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/main.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/gestionUDD.js",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/smart.json",
+		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/private/nuevaAccion.js",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/client.js",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/server/server.js",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/private/old.js",
-		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/private/nuevaAccion.js",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/private/mejoraShow.js",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/formContainer.html",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/home.html",
-		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/mejoraForm.js",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/_formContainer.html",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/_mejora.html",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/_home.html",
@@ -391,11 +425,9 @@
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/mejora.html",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/private/nuevaAccion2.html",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/edita.html",
-		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/mejoraForm.html",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/nueva.html",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/listaResponsables.html",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/footer.html",
-		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/gestionUDD.html",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/templates/nav.html",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client/templates/mejoraForm.html",
 		"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/gestionUDD.css",
@@ -466,6 +498,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ISODate(\"",
+			"\")",
+			"insert",
+			"crearAccion",
+			"guardarAccion",
 			"submitme",
 			"mejora",
 			"nadie",
@@ -480,6 +517,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\"",
 			""
 		],
 		"reverse": false,
@@ -491,29 +529,29 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "gestionUDD.js",
+					"file": "client/home.js",
 					"settings":
 					{
-						"buffer_size": 278,
+						"buffer_size": 9705,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								44,
-								44
+								8439,
+								8439
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -524,52 +562,52 @@
 				},
 				{
 					"buffer": 1,
-					"file": "client/mejoraForm.js",
+					"file": "client/home.html",
 					"settings":
 					{
-						"buffer_size": 2824,
+						"buffer_size": 2351,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2017,
+								2017
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 197.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "lib/router.js",
+					"file": "client/main.js",
 					"settings":
 					{
-						"buffer_size": 741,
+						"buffer_size": 1116,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								554,
-								554
+								140,
+								140
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -580,46 +618,46 @@
 				},
 				{
 					"buffer": 3,
-					"file": "gestionUDD.html",
+					"file": "gestionUDD.css",
 					"settings":
 					{
-						"buffer_size": 523,
+						"buffer_size": 4435,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								526,
-								526
+								505,
+								505
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 137.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "client/mejoraForm.html",
+					"file": "client/nav.html",
 					"settings":
 					{
-						"buffer_size": 15820,
+						"buffer_size": 8834,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								129,
+								129
 							]
 						],
 						"settings":
@@ -636,26 +674,56 @@
 				},
 				{
 					"buffer": 5,
-					"file": "client/client.js",
+					"file": "server/server.js",
 					"settings":
 					{
-						"buffer_size": 1056,
+						"buffer_size": 419,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								680,
-								680
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/mejoraForm.js",
+					"settings":
+					{
+						"buffer_size": 2910,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1765,
+								1789
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 722.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -700,7 +768,7 @@
 	},
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":

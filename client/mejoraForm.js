@@ -33,6 +33,8 @@
              _responsables[_responsable[k].value] = _responsable[k].checked;
          }
 
+         var currentUserId = Meteor.userId();
+
          var newData = {
              nactividad: _nactividad,
              estado: _estado,
@@ -46,7 +48,8 @@
              plazo: _plazo,
              responsables: _responsables,
              avance: _avance,
-             revision: new Date()
+             revision: new Date(),
+             creadoPor: currentUserId
 
          }
 

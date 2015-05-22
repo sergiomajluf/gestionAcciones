@@ -24,6 +24,7 @@
                 </tr>
             </thead>
             <tbody id="fbody">
+            {{#if usuarioConocido}}
             {{#each mejora}}
 
                 <tr class="mejora fade-in" data-category="{{estado}} {{#each arrayify responsables}}{{#if value}}{{name}} {{/if}}{{/each}}">
@@ -35,10 +36,13 @@
                         <p class="list-group-item-text"><small>Editado: {{formatDate revision "short"}}</small></p>
                     </td>
                     <td>
+                        <!--<h6>id: {{_id}}</h6>
+                        <h6>creado por {{creadoPor}}</h6>-->
                         <h6>Plazo:</h6><span>{{plazo}}</span>
                     </td>
                 </tr>          
             {{/each}}
+            {{/if}}
             </tbody>
 
         </table>

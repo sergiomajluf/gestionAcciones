@@ -179,17 +179,22 @@ Template.Home.helpers({
                 return Mejoras.find({}, ordenDescendente)
 
         }
-
-
         //return Mejoras.find({ "responsables.decano":true}).fetch()
-
-
     },
     responsableActual: function() {
         return Session.get("filtroResponsables")
     },
     resultados: function(){
         return Session.get("filterResults")
+    },
+    usuarioConocido: function(){
+        var adminEmail = Meteor.user().emails[0].address;
+        if( adminEmail === "smajluf@udd.cl" || adminEmail === "vpichara@udd.cl" || adminEmail === "disenoudd@udd.cl"){
+        return true;
+        } else {
+        return false;
+        //add some logic for displaying error template.
+        }
     }
 });
 
