@@ -1,6 +1,7 @@
 Meteor.startup(function() {
     // code to run on server at startup
-    //console.log("Comenzamos!")
+    console.log("Comenzamos!")
+    //console.log(serverData)
 	/*
 	db.foo.find().toArray()
 	db.foo.find().forEach(printjson)
@@ -10,7 +11,7 @@ Meteor.startup(function() {
         console.log("Base de Datos Vacía");
 
         for (var i = 0; i < serverData.length; i++) {
-            console.log(serverData[i]._id);
+            console.log(serverData[i]);
             Mejoras.insert(serverData[i]);
         };
     }

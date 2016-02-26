@@ -140,6 +140,19 @@
                         <option {{selected nactividad "125"}}>125</option>
                         <option {{selected nactividad "126"}}>126</option>
                         <option {{selected nactividad "127"}}>127</option>
+                        <option {{selected nactividad "128"}}>128</option>
+                        <option {{selected nactividad "129"}}>129</option>
+                        <option {{selected nactividad "130"}}>130</option>
+                        <option {{selected nactividad "131"}}>131</option>
+                        <option {{selected nactividad "132"}}>132</option>
+                        <option {{selected nactividad "133"}}>133</option>
+                        <option {{selected nactividad "134"}}>134</option>
+                        <option {{selected nactividad "135"}}>135</option>
+                        <option {{selected nactividad "136"}}>136</option>
+                        <option {{selected nactividad "137"}}>137</option>
+                        <option {{selected nactividad "138"}}>138</option>
+                        <option {{selected nactividad "139"}}>139</option>
+                        <option {{selected nactividad "140"}}>140</option>
                     </select>
                 </div>
             </div>
@@ -245,12 +258,12 @@
             </div>
 
             <div class="col-md-4">
-                <div class="form-group">
+                <div class="form-group" id="responsablesFacultad">
                     <label>Responsables</label>
 
                     <div class="checkbox">
                         {{#if _id}} {{#each arrayify responsables}}
-                        <div class="form-group">
+                        <div class="form-group" id="{{name}}">
                             <label>
                                 <input type="checkbox" name="v_responsable[]" checked={{value}} value="{{name}}" {{editable}}> {{name}}
                             </label>

@@ -88,3 +88,14 @@
 
      }
  });
+
+Template.mejoraForm.rendered = function(){
+    $( "<br/><h6>Directores de Pregrado</h6>" ).insertBefore( $("[id='directorPregradoCcp']" ));
+    $( "<br/><h6>Extensión y Vinculación con el Medio</h6>" ).insertBefore( $("[id='directorExtension']" ));
+    $( "<br/><h6>Coordinadores</h6>" ).insertBefore( $("[id='coordinadorAcademicoCcp']" ));
+    $( "<br/><h6>Investigación</h6>" ).insertBefore( $("[id='investigador']" ));
+};
+
+
+
+

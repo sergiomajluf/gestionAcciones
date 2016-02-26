@@ -175,7 +175,7 @@
 			"file": "client/home.js",
 			"settings":
 			{
-				"buffer_size": 9705,
+				"buffer_size": 9742,
 				"line_ending": "Unix"
 			}
 		},
@@ -224,6 +224,14 @@
 			"settings":
 			{
 				"buffer_size": 2910,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/mejoraForm.html",
+			"settings":
+			{
+				"buffer_size": 16795,
 				"line_ending": "Unix"
 			}
 		}
@@ -490,6 +498,8 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"/Users/sergiomajluf/Sites/meteorApps/gestionUDD/client",
+			"/Users/sergiomajluf/Sites/meteorApps/gestionUDD",
 			""
 		]
 	},
@@ -498,6 +508,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"126",
+			"127",
 			"ISODate(\"",
 			"\")",
 			"insert",
@@ -529,7 +541,6 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
 				{
@@ -537,15 +548,15 @@
 					"file": "client/home.js",
 					"settings":
 					{
-						"buffer_size": 9705,
+						"buffer_size": 9742,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8439,
-								8439
+								0,
+								0
 							]
 						],
 						"settings":
@@ -583,7 +594,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 197.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -723,7 +734,83 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 722.0,
+						"translation.y": 592.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "client/mejoraForm.html",
+					"settings":
+					{
+						"buffer_size": 16795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9935,
+								9935
+							],
+							[
+								10010,
+								10010
+							],
+							[
+								10085,
+								10085
+							],
+							[
+								10160,
+								10160
+							],
+							[
+								10235,
+								10235
+							],
+							[
+								10310,
+								10310
+							],
+							[
+								10385,
+								10385
+							],
+							[
+								10460,
+								10460
+							],
+							[
+								10535,
+								10535
+							],
+							[
+								10610,
+								10610
+							],
+							[
+								10685,
+								10685
+							],
+							[
+								10760,
+								10760
+							],
+							[
+								10835,
+								10835
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1629.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
