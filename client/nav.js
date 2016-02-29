@@ -26,6 +26,7 @@ Template.nav.events({
         //console.log(event.target)
         $("#filterMenuHorizontal li a").removeClass('selected')
         $(event.target).addClass('selected')
+        $("#filterMenuHorizontal").collapse('hide')
     }
 });
 
